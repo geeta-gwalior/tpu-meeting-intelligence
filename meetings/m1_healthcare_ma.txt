@@ -1,0 +1,12 @@
+Meeting Title: Project Helix — Confidential Clinic Acquisition & Cloud Migration Sync
+Participants: Maya Lin (VP Operations), Carlos Mendez (Head of Security), Priya Nair (Legal Counsel), Evan Brooks (VP Finance)
+
+[00:00:15] Maya Lin: Welcome everyone. Because we are reviewing the confidential acquisition of NorthStar Clinics and migrating 1.4 million patient records, none of these notes can leave our private infrastructure.
+[00:01:10] Carlos Mendez: Security Risk 1 (High): TLS 1.1 is still enabled on NorthStar's legacy HL7 radiology gateway. Security Risk 2 (High): Their audit logs rotate every 14 days instead of the mandatory 6-year HIPAA retention period.
+[00:02:30] Priya Nair: Legal Risk 3 (High): NorthStar's third-party transcription vendor has an expired Business Associate Agreement (BAA). Closing on December 15 without fixing that exposes us to regulatory penalties.
+[00:04:05] Evan Brooks: Let's lock Decision 1 (Approved, Owner: Evan Brooks): Approve holding $4.5M in compliance escrow in the final purchase agreement. Decision 2 (Rejected, Owner: Carlos Mendez): Reject Day-1 direct network peering with NorthStar's VLAN until TLS 1.3 and 6-year immutable logs are verified.
+[00:06:25] Carlos Mendez: Operational Risk 4 (Medium): Launching the unified patient portal on January 10 risks clinical lockouts because half the IT team is on holiday leave during SSO cutover.
+[00:07:15] Evan Brooks: Decision 3 (Deferred, Owner: Maya Lin): Defer the unified patient portal launch from January 10 to February 17 so doctors get two weeks of staging training.
+[00:10:45] Priya Nair: Action 1: Priya Nair will update Schedule 4.12 with the $4.5M escrow holdback and BAA clause by November 25.
+[00:11:35] Carlos Mendez: Action 2: Carlos Mendez will deploy the isolated GCP landing zone with TLS 1.3 and 6-year WORM logs by November 27.
+[00:12:20] Maya Lin: Action 3: Maya Lin will publish the February 17 portal training schedule by December 4. Action 4: Evan Brooks will allocate the $18,000/month M&A staging budget code and idle-cluster alerts by November 30.

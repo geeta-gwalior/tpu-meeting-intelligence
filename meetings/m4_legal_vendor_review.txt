@@ -1,0 +1,11 @@
+Meeting Title: Legal & AI Platform Review — Sovereign Cloud TPU Inference vs. Third-Party LLM Addendum
+Participants: Rachel Kim (VP Legal), Tomasz Kowalski (Head of AI Platform), Ananya Sharma (FinOps Director), Victor Gomez (Compliance Officer)
+
+[00:00:15] Rachel Kim: We are deciding between Vendor Z's $420,000/year hosted LLM enterprise contract and self-hosting open-weight Gemma models on Cloud TPU v6e inside our private VPC.
+[00:01:30] Victor Gomez: Compliance Risk 1 (High): Vendor Z refused to delete Section 9.4, which keeps customer prompts for 30 days on multi-tenant abuse-monitoring clusters—violating our defense and banking zero-subprocessor clauses.
+[00:03:00] Tomasz Kowalski: Technical Risk 2 (Medium): Running Spot TPU VMs alone risks mid-day preemptions during peak customer traffic. Technical Risk 3 (Medium): Unseen 16K-token prompts on cold TPU workers can trigger one-time XLA graph compilation stalls.
+[00:04:20] Ananya Sharma: Budget Risk 4 (Low): Idle on-demand multi-chip slices left running over weekends would waste cloud budget without automated scaling policies.
+[00:05:30] Rachel Kim: Decision 1 (Rejected, Owner: Rachel Kim): Reject Vendor Z's enterprise addendum due to the 30-day prompt retention clause. Decision 2 (Approved, Owner: Tomasz Kowalski): Approve productionizing vLLM-TorchTPU serving Gemma inside `vpc-sovereign-prod` with 1 reserved primary `v6e-1` node plus Spot burst replicas.
+[00:07:00] Ananya Sharma: Decision 3 (Deferred, Owner: Ananya Sharma): Defer purchasing a 3-year TPU Committed Use Discount until we collect 30 days of production token-throughput telemetry.
+[00:08:30] Rachel Kim: Action 1: Rachel Kim will issue the formal contract non-renewal notice to Vendor Z by Friday November 27. Action 2: Tomasz Kowalski will add startup XLA warmup probes and prefix-cache Prometheus alerts by December 3.
+[00:09:40] Ananya Sharma: Action 3: Ananya Sharma will configure weekend auto-downscaling and GCP budget alerts by November 29. Action 4: Victor Gomez will archive the VPC data-sovereignty architecture packet for SOC2 auditors by December 6.

@@ -1,0 +1,33 @@
+Meeting Title: Project Helix — Confidential Clinic Acquisition & Cloud Migration Sync
+Date: November 18, 2026
+Participants:
+- Maya Lin (VP Operations)
+- Carlos Mendez (Head of Security)
+- Priya Nair (Legal Counsel)
+- Evan Brooks (VP Finance & Strategy)
+
+[00:00:15] Maya Lin: Thanks everyone for joining. Since we are reviewing the confidential acquisition of NorthStar Clinics and migrating 1.4 million patient records, none of our meeting notes can be sent to external public SaaS tools. Let's review security, legal, budget, and timeline today.
+
+[00:01:10] Carlos Mendez: On security, our audit of NorthStar's radiology servers found two major risks. First, TLS 1.1 is still enabled on their legacy HL7 gateway, which is a compliance and security risk. Second, their audit logs rotate every 14 days instead of the required 6-year HIPAA retention period.
+
+[00:02:30] Priya Nair: From a legal standpoint, NorthStar also uses a third-party transcription vendor whose Business Associate Agreement (BAA) expired last quarter. If we close the deal on December 15 without fixing that BAA, we inherit regulatory liability. I recommend holding $4.5M in escrow until both the BAA and HIPAA log retention are remediated.
+
+[00:04:05] Evan Brooks: That makes sense financially. Let's lock Decision 1: we approve holding $4.5M in compliance escrow in the final purchase agreement. Decision 2: we reject direct network peering with NorthStar's clinic network on Day 1 until TLS 1.3 and 6-year immutable log archiving are verified by Carlos's team.
+
+[00:05:40] Maya Lin: What about the unified patient portal launch? Marketing wanted to launch on January 10, right after the holidays, so patients see one combined brand.
+
+[00:06:25] Carlos Mendez: Launching January 10 is a high timeline risk. Half the clinic IT staff is on leave in late December, and rushing SSO migration could lock doctors out of patient charts during Monday morning clinics.
+
+[00:07:15] Evan Brooks: Agreed, we shouldn't risk clinical downtime. Let's make Decision 3: we defer the unified patient portal launch from January 10 to February 17, giving clinical staff two full weeks of training in a staging environment.
+
+[00:08:30] Maya Lin: Great, let's also check our internal cloud budget. Running continuous compliance scans and staging environments adds $18,000 per month during migration, which wasn't in Q4 IT opex.
+
+[00:09:20] Evan Brooks: We can absorb $18,000 per month from the M&A integration reserve, provided engineering shuts down duplicate staging clusters within 14 days after the February 17 cutover. That's a medium budget risk if clusters are left idle.
+
+[00:10:45] Priya Nair: Let's confirm clear action items before we wrap up. Action 1: Priya Nair will update Schedule 4.12 of the purchase agreement to add the $4.5M escrow holdback and vendor BAA remediation clause by Wednesday, November 25.
+
+[00:11:35] Carlos Mendez: Action 2: Carlos Mendez will deploy the isolated GCP landing zone with TLS 1.3 enforcement and 6-year WORM log storage by Friday, November 27.
+
+[00:12:20] Maya Lin: Action 3: Maya Lin will publish the revised February 17 portal rollout schedule and schedule two doctor training cohorts by December 4. And Action 4: Evan Brooks will allocate the $18,000/month M&A integration budget code and set automated idle-cluster teardown alerts by November 30.
+
+[00:13:10] Evan Brooks: Everything is clear and aligned. Let's reconvene next Friday to verify the legal redlines and landing zone checklist.

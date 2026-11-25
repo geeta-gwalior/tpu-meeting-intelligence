@@ -1,0 +1,11 @@
+Meeting Title: SEV-1 Postmortem — Multi-Tenant Billing Cache Collision & Cyber Monday Readiness
+Participants: Hannah Cho (Principal SRE), Devon Patel (VP Security), Liam O'Connor (Platform Lead), Nora Bell (Support Lead)
+
+[00:00:20] Hannah Cho: Yesterday at 14:12 UTC, hotfix v4.18.2 caused a 38-minute SEV-1 outage on our EMEA billing preview API due to a Redis cache key collision.
+[00:01:30] Devon Patel: Security Risk 1 (High): Lowercase `x-org-scope` headers bypassed tenant prefixing in the cache key serializer. Our assertion middleware blocked cross-tenant responses with HTTP 500s so zero PII leaked, but the near-miss is critical.
+[00:02:45] Liam O'Connor: Technical Risk 2 (High): CI integration suites only run single-tenant fixtures, so multi-tenant concurrency bugs pass automated checks undetected.
+[00:04:00] Hannah Cho: Decision 1 (Approved, Owner: Liam O'Connor): Enforce cryptographic HMAC tenant-scoping inside the core cache SDK for all Tier-0 services. Decision 2 (Rejected, Owner: Hannah Cho): Reject re-enabling EMEA batch invoice caching until multi-tenant chaos tests pass in CI.
+[00:05:30] Devon Patel: Operational Risk 3 (Medium): Cyber Monday peak traffic arrives in 11 days, and running uncached previews pushes Postgres read-replica CPU to 78%. Budget Risk 4 (Low): Adding two temporary read replicas adds $3,800 in unbudgeted November cloud spend.
+[00:07:00] Hannah Cho: Decision 3 (Deferred, Owner: Nora Bell): Defer the self-serve CSV bulk-export feature release until December 8 after Cyber Monday freeze lifts.
+[00:08:40] Liam O'Connor: Action 1: Liam O'Connor will ship cache-sdk v5.0 with mandatory HMAC tenant keys and 50-tenant chaos tests by November 22. Action 2: Hannah Cho will provision two Postgres read replicas in europe-west4 today by 18:00 UTC.
+[00:09:50] Devon Patel: Action 3: Devon Patel will send signed assurance memos to the 3 impacted enterprise sandbox customers by November 20. Action 4: Nora Bell will update the status-page postmortem and customer FAQ by November 21.

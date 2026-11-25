@@ -1,0 +1,62 @@
+[
+  {
+    "scale_label": "~1k tokens (10-min sync)",
+    "multiplier": 1,
+    "naive_latency_s": 5.18,
+    "naive_overall_hit_pct": 0.0,
+    "naive_agents_2_4_hit_pct": 0.0,
+    "naive_hit_tokens": 0,
+    "naive_query_tokens": 5287,
+    "cached_latency_s": 4.5,
+    "cached_overall_hit_pct": 45.0,
+    "cached_agents_2_4_hit_pct": 60.0,
+    "cached_hit_tokens": 2304,
+    "cached_query_tokens": 5117,
+    "speedup_x": 1.15
+  },
+  {
+    "scale_label": "~2k tokens (20-min sync)",
+    "multiplier": 2,
+    "naive_latency_s": 5.22,
+    "naive_overall_hit_pct": 0.0,
+    "naive_agents_2_4_hit_pct": 0.0,
+    "naive_hit_tokens": 0,
+    "naive_query_tokens": 8817,
+    "cached_latency_s": 5.12,
+    "cached_overall_hit_pct": 60.7,
+    "cached_agents_2_4_hit_pct": 80.9,
+    "cached_hit_tokens": 5376,
+    "cached_query_tokens": 8862,
+    "speedup_x": 1.02
+  },
+  {
+    "scale_label": "~4k tokens (40-min review)",
+    "multiplier": 4,
+    "naive_latency_s": 6.09,
+    "naive_overall_hit_pct": 0.0,
+    "naive_agents_2_4_hit_pct": 0.0,
+    "naive_hit_tokens": 0,
+    "naive_query_tokens": 16061,
+    "cached_latency_s": 4.76,
+    "cached_overall_hit_pct": 67.2,
+    "cached_agents_2_4_hit_pct": 89.6,
+    "cached_hit_tokens": 10752,
+    "cached_query_tokens": 16000,
+    "speedup_x": 1.28
+  },
+  {
+    "scale_label": "~6k tokens (60-min board)",
+    "multiplier": 6,
+    "naive_latency_s": 5.94,
+    "naive_overall_hit_pct": 0.0,
+    "naive_agents_2_4_hit_pct": 0.0,
+    "naive_hit_tokens": 0,
+    "naive_query_tokens": 23438,
+    "cached_latency_s": 4.62,
+    "cached_overall_hit_pct": 69.2,
+    "cached_agents_2_4_hit_pct": 92.3,
+    "cached_hit_tokens": 16128,
+    "cached_query_tokens": 23306,
+    "speedup_x": 1.29
+  }
+]

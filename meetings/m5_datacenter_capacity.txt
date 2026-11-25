@@ -1,0 +1,11 @@
+Meeting Title: APAC Expansion Sync — Tokyo Region Data Residency & Disaster Recovery Cutover
+Participants: Kenji Takahashi (APAC Eng Director), Elena Rostova (Infra Architect), Sameer Kulkarni (DPO), Claire Dubois (Program Lead)
+
+[00:00:20] Claire Dubois: We are 6 weeks from onboarding three Japanese financial institutions onto our dedicated `asia-northeast1` Tokyo stack, worth $9.4M in ARR.
+[00:01:35] Sameer Kulkarni: Compliance Risk 1 (High): Japan APPI contract riders prohibit cross-border failover snapshots to `us-central1`; backups are currently replicating to a global multi-region bucket by default.
+[00:02:55] Elena Rostova: Technical Risk 2 (High): Single-region Tokyo deployment without Osaka (`asia-northeast2`) warm standby leaves our Recovery Time Objective at 4 hours instead of the contracted 15-minute SLA.
+[00:04:15] Kenji Takahashi: Supply Risk 3 (Medium): Dedicated HSM encryption appliance provisioning in Osaka has a 10-day carrier lead-time risk. Budget Risk 4 (Low): Dual-region active-passive KMS and Spanner witness nodes add $6,400/month.
+[00:05:40] Claire Dubois: Decision 1 (Approved, Owner: Sameer Kulkarni): Restrict all Japanese tenant GCS and database backups strictly to `asia-northeast1` and `asia-northeast2` via GCP Organization Policy constraints. Decision 2 (Approved, Owner: Elena Rostova): Approve provisioning the Osaka warm-standby failover cluster to meet the 15-minute RTO SLA.
+[00:07:10] Kenji Takahashi: Decision 3 (Deferred, Owner: Kenji Takahashi): Defer real-time voice analytics in Tokyo to Phase 2 in March so core ledger residency ships on schedule.
+[00:08:45] Elena Rostova: Action 1: Elena Rostova will apply the `gcp.resourceLocations` Org Policy lock on Tokyo tenant folders by November 26. Action 2: Kenji Takahashi will execute the Tokyo-to-Osaka 15-minute failover game-day drill by December 9.
+[00:09:50] Sameer Kulkarni: Action 3: Sameer Kulkarni will deliver the signed APPI data-residency attestation to client legal teams by December 11. Action 4: Claire Dubois will update the executive launch readiness tracker by November 28.

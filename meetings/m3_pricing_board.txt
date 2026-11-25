@@ -1,0 +1,11 @@
+Meeting Title: Q1 Board Operating Review — Enterprise Seat-to-Hybrid AI Pricing Transition
+Participants: Nadia Al-Mansoor (CEO), Marcus Vance (CFO), Sofia Rossi (VP Product), Ethan Park (VP Sales)
+
+[00:00:25] Nadia Al-Mansoor: Confidential board prep: gross retention remains strong at 94%, but net dollar retention dropped from 118% to 107% because enterprise customers automate workflows with our AI agents and reduce human seats.
+[00:01:50] Marcus Vance: Financial Risk 1 (High): Forcing existing annual customers onto pure consumption pricing immediately creates a $6.2M Q1 renewal churn risk.
+[00:03:10] Sofia Rossi: Technical Risk 2 (High): Our Snowflake usage pipeline currently has a 6-hour metering lag, meaning bursty customer workflows could exceed spending caps before alerts trigger.
+[00:04:30] Nadia Al-Mansoor: Decision 1 (Approved, Owner: Sofia Rossi): Approve launching the Hybrid Platform Fee + Verified Resolution Credits tier for all new Enterprise contracts starting February 1. Decision 2 (Approved, Owner: Marcus Vance): Grandfather existing annual customers on seat pricing for 12 months with an optional 15% bonus credit incentive for early migration.
+[00:06:15] Ethan Park: Sales Operational Risk 3 (Medium): Account executives could stall Q1 deals if commission quotas still reward seat count over credit commits. Market Risk 4 (Medium): SMB self-serve buyers may abandon checkout if credit estimation feels confusing.
+[00:07:45] Marcus Vance: Decision 3 (Deferred, Owner: Nadia Al-Mansoor): Defer all SMB self-serve pricing changes until Q2 after 60 days of enterprise metering validation.
+[00:09:10] Sofia Rossi: Action 1: Sofia Rossi will deploy streaming Kafka usage counters with sub-60-second hard-cap webhooks by January 15.
+[00:10:00] Marcus Vance: Action 2: Marcus Vance will publish the FY27 quota-neutral sales commission plan by December 5. Action 3: Ethan Park will run pricing enablement workshops for all enterprise AEs by January 22. Action 4: Nadia Al-Mansoor will circulate the final board pricing deck by December 10.

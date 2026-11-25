@@ -1,0 +1,169 @@
+{
+  "models": {
+    "gemini": {
+      "target": "gemini",
+      "label": "Hosted API: Gemini 3.5 Flash",
+      "model_id": "gemini-3.5-flash",
+      "meetings_tested": 5,
+      "avg_latency_s": 29.88,
+      "schema_valid_pct": 100.0,
+      "extraction_completeness_pct": 100.0,
+      "tpu_kv_cache_capacity_tokens": null,
+      "cost_per_1k_spot_usd": 3.2,
+      "cost_per_1k_ondemand_usd": 3.2,
+      "privacy": "External Cloud API",
+      "per_meeting": [
+        {
+          "meeting": "m1_healthcare_ma",
+          "latency_s": 16.17,
+          "insights": 4,
+          "decisions": 3,
+          "risks": 4,
+          "actions": 4
+        },
+        {
+          "meeting": "m2_security_postmortem",
+          "latency_s": 16.24,
+          "insights": 4,
+          "decisions": 3,
+          "risks": 4,
+          "actions": 4
+        },
+        {
+          "meeting": "m3_pricing_board",
+          "latency_s": 84.92,
+          "insights": 5,
+          "decisions": 3,
+          "risks": 4,
+          "actions": 4
+        },
+        {
+          "meeting": "m4_legal_vendor_review",
+          "latency_s": 14.21,
+          "insights": 4,
+          "decisions": 3,
+          "risks": 4,
+          "actions": 4
+        },
+        {
+          "meeting": "m5_datacenter_capacity",
+          "latency_s": 17.84,
+          "insights": 5,
+          "decisions": 3,
+          "risks": 4,
+          "actions": 4
+        }
+      ]
+    },
+    "tpu_4b": {
+      "target": "tpu_4b",
+      "label": "TPU v6e-1: Gemma 3 4B",
+      "model_id": "google/gemma-3-4b-it",
+      "meetings_tested": 5,
+      "avg_latency_s": 3.99,
+      "schema_valid_pct": 100.0,
+      "extraction_completeness_pct": 98.3,
+      "tpu_kv_cache_capacity_tokens": 213043,
+      "cost_per_1k_spot_usd": 0.94,
+      "cost_per_1k_ondemand_usd": 2.99,
+      "privacy": "100% Private VPC",
+      "per_meeting": [
+        {
+          "meeting": "m1_healthcare_ma",
+          "latency_s": 3.87,
+          "insights": 5,
+          "decisions": 3,
+          "risks": 4,
+          "actions": 4
+        },
+        {
+          "meeting": "m2_security_postmortem",
+          "latency_s": 4.04,
+          "insights": 5,
+          "decisions": 3,
+          "risks": 4,
+          "actions": 4
+        },
+        {
+          "meeting": "m3_pricing_board",
+          "latency_s": 3.86,
+          "insights": 5,
+          "decisions": 3,
+          "risks": 4,
+          "actions": 4
+        },
+        {
+          "meeting": "m4_legal_vendor_review",
+          "latency_s": 3.79,
+          "insights": 5,
+          "decisions": 3,
+          "risks": 4,
+          "actions": 4
+        },
+        {
+          "meeting": "m5_datacenter_capacity",
+          "latency_s": 4.37,
+          "insights": 5,
+          "decisions": 3,
+          "risks": 3,
+          "actions": 4
+        }
+      ]
+    },
+    "tpu_12b": {
+      "target": "tpu_12b",
+      "label": "TPU v6e-1: Gemma 3 12B",
+      "model_id": "google/gemma-3-12b-it",
+      "meetings_tested": 5,
+      "avg_latency_s": 11.91,
+      "schema_valid_pct": 100.0,
+      "extraction_completeness_pct": 100.0,
+      "tpu_kv_cache_capacity_tokens": 20808,
+      "cost_per_1k_spot_usd": 2.81,
+      "cost_per_1k_ondemand_usd": 8.93,
+      "privacy": "100% Private VPC",
+      "per_meeting": [
+        {
+          "meeting": "m1_healthcare_ma",
+          "latency_s": 11.57,
+          "insights": 5,
+          "decisions": 3,
+          "risks": 4,
+          "actions": 4
+        },
+        {
+          "meeting": "m2_security_postmortem",
+          "latency_s": 11.53,
+          "insights": 5,
+          "decisions": 3,
+          "risks": 4,
+          "actions": 4
+        },
+        {
+          "meeting": "m3_pricing_board",
+          "latency_s": 10.75,
+          "insights": 5,
+          "decisions": 3,
+          "risks": 4,
+          "actions": 4
+        },
+        {
+          "meeting": "m4_legal_vendor_review",
+          "latency_s": 12.31,
+          "insights": 4,
+          "decisions": 3,
+          "risks": 4,
+          "actions": 4
+        },
+        {
+          "meeting": "m5_datacenter_capacity",
+          "latency_s": 13.4,
+          "insights": 5,
+          "decisions": 3,
+          "risks": 4,
+          "actions": 4
+        }
+      ]
+    }
+  }
+}

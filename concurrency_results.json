@@ -1,0 +1,68 @@
+[
+  {
+    "concurrency": 1,
+    "meetings_completed": 30,
+    "failures": 2,
+    "retries": 3,
+    "error_samples": [
+      "InternalServerError: litellm.InternalServerError: InternalServerError: Hosted_vllmException - Server disconnected"
+    ],
+    "wall_time_s": 118.09,
+    "meetings_per_hour": 914.6,
+    "avg_meeting_latency_s": 3.92,
+    "max_meeting_latency_s": 4.39,
+    "prompt_tokens_per_s": 942.9,
+    "generation_tokens_per_s": 199.6,
+    "prefix_cache_hit_pct": 41.4,
+    "cost_per_1k_meetings_spot_usd": 0.929,
+    "cost_per_1k_meetings_ondemand_usd": 2.952
+  },
+  {
+    "concurrency": 4,
+    "meetings_completed": 32,
+    "failures": 0,
+    "retries": 0,
+    "error_samples": [],
+    "wall_time_s": 34.27,
+    "meetings_per_hour": 3361.7,
+    "avg_meeting_latency_s": 4.23,
+    "max_meeting_latency_s": 4.62,
+    "prompt_tokens_per_s": 3453.3,
+    "generation_tokens_per_s": 728.2,
+    "prefix_cache_hit_pct": 41.5,
+    "cost_per_1k_meetings_spot_usd": 0.253,
+    "cost_per_1k_meetings_ondemand_usd": 0.803
+  },
+  {
+    "concurrency": 8,
+    "meetings_completed": 32,
+    "failures": 0,
+    "retries": 0,
+    "error_samples": [],
+    "wall_time_s": 19.86,
+    "meetings_per_hour": 5802.0,
+    "avg_meeting_latency_s": 4.81,
+    "max_meeting_latency_s": 5.22,
+    "prompt_tokens_per_s": 5949.0,
+    "generation_tokens_per_s": 1264.7,
+    "prefix_cache_hit_pct": 41.6,
+    "cost_per_1k_meetings_spot_usd": 0.147,
+    "cost_per_1k_meetings_ondemand_usd": 0.465
+  },
+  {
+    "concurrency": 16,
+    "meetings_completed": 32,
+    "failures": 0,
+    "retries": 0,
+    "error_samples": [],
+    "wall_time_s": 13.26,
+    "meetings_per_hour": 8685.8,
+    "avg_meeting_latency_s": 6.32,
+    "max_meeting_latency_s": 6.94,
+    "prompt_tokens_per_s": 8880.4,
+    "generation_tokens_per_s": 1890.0,
+    "prefix_cache_hit_pct": 41.7,
+    "cost_per_1k_meetings_spot_usd": 0.098,
+    "cost_per_1k_meetings_ondemand_usd": 0.311
+  }
+]
